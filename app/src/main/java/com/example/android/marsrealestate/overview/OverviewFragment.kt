@@ -13,7 +13,7 @@ import com.example.android.marsrealestate.databinding.FragmentOverviewBinding
 class OverviewFragment : Fragment() {
 
     /**
-     * Lazily initialize our [OverviewViewModel].
+     *lazily initializes the OverviewViewModel --  means the OverviewViewModel is created the first time it is used.
      */
     private val viewModel: OverviewViewModel by lazy {
         ViewModelProvider(this).get(OverviewViewModel::class.java)
