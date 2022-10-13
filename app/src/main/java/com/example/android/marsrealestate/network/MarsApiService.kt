@@ -25,12 +25,10 @@ interface MarsApiService {
     suspend fun getProperties(): List<MarsProperty>     // more efficient and easier to read if you could use coroutines with exception handling, instead of using callbacks
 }
 
-/* efine a public object called MarsApi to initialize the Retrofit service.
+/* define a public object called MarsApi to initialize the Retrofit service.
             This is a standard Kotlin code pattern to use when creating a service object.  */
-
-object MarsApi{
-    val retrofitService: MarsApiService by lazy {
-        retrofit.create(MarsApiService::class.java)
-    }
+object MarsApi {
+    val retrofitService : MarsApiService by lazy {
+        retrofit.create(MarsApiService::class.java) }
 }
 
